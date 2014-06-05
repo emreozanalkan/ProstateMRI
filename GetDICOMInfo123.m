@@ -1,0 +1,10 @@
+function [patientName, patientID, patientBirthDate, studyID, studyDate, sliceLocation, instanceNumber] = GetDICOMInfo(info)
+patientNamefirst = info.PatientName.GivenName;
+patientNameLast = info.PatientName.FamilyName;
+patientName = strcat(patientNamefirst,{' '},patientNameLast);
+patientID = info.PatientID;
+patientBirthDate = info.PatientBirthDate;
+studyID = info.StudyID;
+studyDate = info.StudyDate;
+sliceLocation = info.SliceLocation;
+instanceNumber = info.InstanceNumber;
